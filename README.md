@@ -20,8 +20,8 @@ CRUD 게시판 API를 구현하며 실무에서 자주 사용하는 기능들을
 ## 기술 스택
 - **Framework**: NestJS (Node.js 기반)  
 - **Language**: TypeScript  
-- **Database**: (예시) PostgreSQL / MySQL / MongoDB 중 선택  
-- **ORM**: TypeORM (or Prisma)  
+- **Database**: PostgreSQL / MySQL / MongoDB / Supabase / Firebase Firestore ( 중 선택 예정 nosql써보고 싶음)  
+- **ORM / SDK**: TypeORM / Prisma / Firebase SDK 등  
 - **Docs**: Swagger  
 
 ---
@@ -67,10 +67,28 @@ pnpm start:dev
 
 ---
 
+---
+
 ## 향후 개선 방향
-- 사용자 인증/인가 (JWT + Passport) 적용  
-- 댓글/대댓글 기능 확장  
-- RBAC(Role-Based Access Control) 적용  
-- 배포 환경 분리(dev, staging, prod)  
+- **데이터베이스 연동**  
+  - TypeORM + PostgreSQL 적용  
+  - Entity/관계/마이그레이션/시딩 기능 추가  
+- **인증 기능 확장**  
+  - JWT + Passport 기반 회원가입/로그인  
+  - Refresh Token 전략  
+  - Guard 활용한 권한 제어  
+- **배포 & 운영**  
+  - pm2를 이용한 프로세스 관리  
+  - 유닛 테스트 & e2e 테스트 적용  
+- **심화 기능**  
+  - Custom Decorator, Provider, Dynamic Module  
+  - Advanced Auth (슬라이딩 세션, 메타데이터 기반 인가)  
+  - Interceptor/미들웨어를 이용한 로깅 및 응답 매핑  
+  - DB 성능 최적화 (Transaction, Index, 쿼리 분석)  
+  - 보안 (Rate limiting, Sentry, Health check)  
+  - CQRS 적용  
+  - 파일 업로드, Task 스케줄링 기능  
+  - CI/CD (GitHub Actions, 프로덕션 인프라)  
 
 ---
+
